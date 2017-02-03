@@ -1,7 +1,7 @@
 Begin Application
 NAME            = docker
 DESCRIPTION     = DOCKER
-CONTAINER       = docker[image($LSB_CONTAINER_IMAGE) options( -P -v /gpfs/fpo/bwadata:/gpfs/fpo/bwadata) starter(lsfadmin)]
+CONTAINER       = docker[image($LSB_CONTAINER_IMAGE) options(--rm -P -v /gpfs/fpo/bwadata:/gpfs/fpo/bwadata) starter(lsfadmin)]
 ENV_VARS        = "LSB_DOCKER_OPTIONS='-v /gpfs/fpo/bwadata:/gpfs/fpo/bwadata'" # THIS SEEMS NOT WORKING
 DESCRIPTION     = Docker User Service
 End Application
